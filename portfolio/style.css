@@ -1,0 +1,94 @@
+/* Wikipedia-inspired base styles */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-image: linear-gradient(to bottom, #f6f6f6, #ffffff);
+}
+
+/* Wiki-style table */
+.wiki-table {
+  border-collapse: collapse;
+  border: 1px solid #a2a9b1;
+  background-color: #f8f9fa;
+}
+
+.wiki-table th,
+.wiki-table td {
+  border: 1px solid #a2a9b1;
+  padding: 0.4rem 0.5rem;
+  vertical-align: top;
+}
+
+.wiki-table th {
+  background-color: #eaecf0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.wiki-table tr:nth-child(even) td {
+  background-color: #fbfbfb;
+}
+
+/* Link colors similar to Wikipedia */
+a {
+  color: #0645ad;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Collapsible sections */
+.collapsible-section .collapsible-body {
+  transition: max-height 0.2s ease-out, opacity 0.15s ease-out;
+}
+
+.collapsible-section.is-collapsed .collapsible-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.collapsible-section:not(.is-collapsed) .collapsible-body {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* Improve smooth scroll experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Top tabs refinement */
+.top-tabs button {
+  font-size: 0.8rem;
+}
+
+.top-tabs .top-tab-active {
+  border-bottom: 2px solid #ffffff;
+  font-weight: 600;
+}
+
+/* Search highlight similar to browser find */
+.search-highlight {
+  background-color: #ffeb3b;
+  padding: 0 1px;
+}
+
+.search-current {
+  outline: 1px solid #d35400;
+}
+
+/* Small tweaks for mobile */
+@media (max-width: 640px) {
+  .wiki-table th,
+  .wiki-table td {
+    font-size: 0.82rem;
+  }
+}
+
